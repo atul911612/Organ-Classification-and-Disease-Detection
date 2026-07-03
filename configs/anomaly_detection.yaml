@@ -1,0 +1,14 @@
+# Disease / anomaly detection (binary: normal vs abnormal).
+# Point --data at "<dataset publish>/Anomaly_detection_1".
+task: anomaly
+model: convnext_tiny        # try: vit_base | efficientnetv2_s | usfm
+img_size: 224
+epochs: 30
+batch_size: 32
+lr: 0.0002
+weight_decay: 0.05
+drop_rate: 0.1
+val_size: 0.15
+test_size: 0.15
+patience: 8
+seed: 42
